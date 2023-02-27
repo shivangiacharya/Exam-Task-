@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+
+    <style>
+        .collapsible {
+          background-color: #0e55b196;
+          color: rgba(233, 10, 192, 0.7);
+          cursor: pointer;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+        }
+        
+        .active, .collapsible:hover {
+          background-color: #ebe711;
+        }
+        
+        .content {
+          padding: 0 18px;
+          display: none;
+          overflow: hidden;
+          background-color: white;
+        }
+        
+        .container {
+          position: relative;
+          width: 80%;
+        }
+        
+        .image {
+          display: block;
+          width: 500px;
+          height: 500px;
+        }
+        
+        .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 500px;
+          width: 500px;
+          opacity: 0;
+          transition: .5s ease;
+          background-color: white;
+        }
+        
+        .container:hover .overlay {
+          opacity: 1;
+        }
+        
+        .text {
+          color: black;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+        
+    </style>
+        
+</head>
+<body>
+    <form>
+        ROSE: <input type="checkbox" class="collapsible">
+        <div class="content">
+        <div class="container">
+            <img src="https://media.istockphoto.com/id/183422512/photo/fresh-red-apples-on-white-background.jpg?b=1&s=170667a&w=0&k=20&c=sJztFjXCApQQsfkCdepLLiNvCUfGY_VEmnGC19_NVrE=" alt="Apple" class="image">
+            <div class="overlay">
+             <div class="text">Eating two apples a day is good for heart health. Apples are an incredibly nutritious fruit that offers multiple health benefits. They're rich in fiber and antioxidants. Eating them is linked to a lower risk of many chronic conditions, including diabetes, heart disease, and cancer. Apples may also promote weight loss and improve gut and brain health.</div>
+            </div>
+        </div>
+        </div>
+    </form>
+    <br>
+
+    <form>
+        ORANGE: <input type="checkbox" class="collapsible">
+            <div class="content">
+            <div class="container">
+                <img src="https://thumbs.dreamstime.com/b/orange-fruit-22884921.jpg" alt="Orange" class="image">
+                <div class="overlay">
+                 <div class="text">Protects your cells from damage. Helps your body make collagen, a protein that heals wounds and gives you smoother skin. Makes it easier to absorb iron to fight anemia.Boosts your immune system, your body's defense against germs.Oranges can be broadly categorized into two primary types: the sweet orange (C. sinensis) and the bitter orange (C. aurantium).</div>
+                </div>
+            </div>
+            </div>
+    </form>
+    <br>
+
+    <form>
+        GRAPES: <input type="checkbox" class="collapsible">
+            <div class="content">
+            <div class="container">
+                <img src="https://www.barhidatesindia.com/wp-content/uploads/2020/04/grapes-fruits-3.jpg" alt="Grapes" class="image">
+                <div class="overlay">
+                 <div class="text">A grape is a fruit, botanically a berry, of the deciduous woody vines of the flowering plant genus Vitis. Grapes are a good source of potassium, a mineral that helps balance fluids in your body. Potassium can help bring down high blood pressure and lower your risk of heart disease and stroke. Most people don't get enough of this nutrient, so eating grapes can help fill the gap.</div>
+                </div>
+            </div>
+            </div>
+    </form>
+    <br>
+
+    <form>
+        STRAWEBERRY: <input type="checkbox" class="collapsible">
+            <div class="content">
+            <div class="container">
+                <img src="https://thumbs.dreamstime.com/b/strawberry-7314331.jpg" alt="Strawberry" class="image">
+                <div class="overlay">
+                 <div class="text">Strawberries are rich in vitamin C and other antioxidants, which help reduce the risk of serious health conditions like cancer, diabetes, stroke, and heart disease. It's also an excellent source of: Magnesium. Phosphorous. A strawberry is actually a multiple fruit which consists of many tiny individual fruits embedded in a fleshy receptacle.</div>
+                </div>
+            </div>
+            </div>
+    </form>
+    <br>
+
+    <form>
+        MANGO: <input type="checkbox" class="collapsible">
+            <div class="content">
+            <div class="container">
+                <img src="https://www.meinstyn.com/wp-content/uploads/2022/06/Health-Benefits-of-Mango.jpg" alt="Mango" class="image">
+                <div class="overlay">
+                    <div class="text">The primary benefit, in addition to being a really good source of vitamin C, is that (mangoes) are a decent source of vitamin A, folate and are pretty high in fiber, which is beneficial for colon cancer prevention, heart disease and weight control."The major reason mango is called the 'king of the fruits is its nutritional value.</div>
+                </div>
+            </div>
+            </div>
+    </form>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+</body>
+</html>
